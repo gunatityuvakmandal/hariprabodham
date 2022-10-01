@@ -1,3 +1,8 @@
+/**
+ * Assumes 'data' array to be populated, 
+ * like data = [{"id": "<ID>", "title": "<TITLE>", "text": "<TEXT>"}] 
+ */
+
 window.onload = loadPrasangById
 
 function loadPrasangById() {
@@ -20,9 +25,9 @@ function getQueryParam(name) {
 }
 
 function getPrasangWithId(id) {
-    for (var i=0; i<prasangs.length; i++) {
-        if (prasangs[i].id === id) {
-            return prasangs[i];
+    for (var i=0; i<data.length; i++) {
+        if (data[i].id === id) {
+            return data[i];
         }
     }
 }
