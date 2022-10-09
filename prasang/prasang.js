@@ -1,8 +1,3 @@
-/**
- * Assumes 'data' array to be populated, 
- * like data = [{"id": "<ID>", "title": "<TITLE>", "text": "<TEXT>"}] 
- */
-
 window.onload = loadPrasangById
 
 function loadPrasangById() {
@@ -17,6 +12,11 @@ function loadPrasangById() {
 
     prasangTextElement = document.getElementById("prasang-text")
     prasangTextElement.innerHTML = prasang.text;
+
+    tags = "Tags: "
+    prasang.tags.forEach(tag => tags += `<span class="badge bg-danger">${tag}</span><span class="px-1"></span>`);
+    prasangTagsElement = document.getElementById("prasang-tags")
+    prasangTagsElement.innerHTML = tags
 }
 
 function getQueryParam(name) {

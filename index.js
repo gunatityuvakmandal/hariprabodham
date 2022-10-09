@@ -3,16 +3,17 @@
  * like data = [{"id": "<ID>", "title": "<TITLE>", "text": "<TEXT>"}] 
  */
 
-window.onload = loadAllPrasangsAndAddToTable
+window.onload = loadAllGunatitPurushoCategory
 
-function loadAllPrasangsAndAddToTable() {
-    let prasangTable = document.getElementById("prasang-table").getElementsByTagName("tbody")[0];
-    
-    data.forEach(prasang => {
-        prasangTable.innerHTML += 
-            `<tr>
-                <td>${prasang.id}</td>
-                <td><a href="./prasang/prasang.html?id=${prasang.id}">${prasang.title}</a></td>
-            </tr>`;
-    });
+function loadAllGunatitPurushoCategory() {
+    let gunatitPurushoTable = document.getElementById("gunatit-purusho-table").getElementsByTagName("tbody")[0];
+
+    categories.forEach(category => {
+        gunatitPurushoTable.innerHTML += 
+        `<tr>
+            <td>${category.id}</td>
+            <td><a href="./prasang/home.html?categoryId=${category.id}">${category.name}</a></td>
+        </tr>`;
+    })
 }
+
