@@ -1,5 +1,5 @@
 # Hariprabodham Prasang Collection
-Website URL - https://rajchandvaniya.github.io/hariprabodham/
+Website URL - https://gunatityuvakmandal.github.io/hariprabodham/
 
 ## Rules
 Please write prasangs only in gujarati, no guj-english or english.
