@@ -5,6 +5,7 @@ function loadAllPrasangsAndAddToTable() {
     
     let categoryId = parseInt(getQueryParam("categoryId"));
     let prasang = getPrasangsWithCategoryId(categoryId);
+    var i = 1
 
     prasangs.forEach(prasang => {
         tags = ""
@@ -12,7 +13,7 @@ function loadAllPrasangsAndAddToTable() {
 
         prasangTable.innerHTML += 
             `<tr>
-                <td>${prasang.id}</td>
+                <td>${i++}</td>
                 <td><a href="./prasang.html?id=${prasang.id}">${prasang.title}</a></td>
                 <td>${tags}</td>
             </tr>`;
