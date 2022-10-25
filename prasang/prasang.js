@@ -13,10 +13,13 @@ function loadPrasangById() {
     prasangTextElement = document.getElementById("prasang-text")
     prasangTextElement.innerHTML = prasang.text;
 
-    tags = "Tags: "
+    tags = ""
     prasang.tags.forEach(tag => tags += `<span class="badge bg-danger">${tag}</span><span class="px-1"></span>`);
     prasangTagsElement = document.getElementById("prasang-tags")
     prasangTagsElement.innerHTML = tags
+
+    prasangPublishedDateElement = document.getElementById("prasang-date")
+    prasangPublishedDateElement.innerText = `${new Date(prasang.publishedOn).toDateString()}`
 }
 
 function getQueryParam(name) {
